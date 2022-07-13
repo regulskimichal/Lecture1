@@ -1,5 +1,6 @@
 package pl.michalregulski.lecture1;
 
+import static pl.michalregulski.lecture1.Color.BLACK;
 import static pl.michalregulski.lecture1.Color.RED;
 
 public class Main {
@@ -9,6 +10,9 @@ public class Main {
             System.out.println(car);
             var car2 = new Car(car.getModelName(), car.getManufacturerName(), 2022, car.getNumberOfSeats(), car.getColor());
             System.out.println(car2);
+
+            var oldCar = new Car("", "", 1800, 2, BLACK);
+            System.out.println(oldCar);
 
             String colorNameInPolish = null;
 //            if (car.getColor() == BLUE) {
@@ -53,7 +57,7 @@ public class Main {
 //            }
 
             System.out.println(colorNameInPolish);
-        } catch (IllegalArgumentException exception) {
+        } catch (Exception exception) {
             System.err.println(exception);
         } finally {
             System.out.println("We handled the creation process");

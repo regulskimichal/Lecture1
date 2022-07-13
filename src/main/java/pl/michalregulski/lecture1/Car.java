@@ -10,7 +10,7 @@ public class Car {
     private final int numberOfSeats;
     private final Color color;
 
-    public Car(String modelName, String manufacturerName, int productionYear, int numberOfSeats, Color color) {
+    public Car(String modelName, String manufacturerName, int productionYear, int numberOfSeats, Color color) throws IllegalArgumentException {
         this.modelName = modelName;
         this.manufacturerName = manufacturerName;
         this.productionYear = productionYear;
