@@ -2,11 +2,13 @@ package pl.michalregulski.lecture1;
 
 public class Car {
 
-    private String modelName;
-    private String manufacturerName;
-    private int productionYear;
-    private int numberOfSeats;
-    private Color color;
+    public static final int YEAR_FROM = 1900;
+
+    private final String modelName;
+    private final String manufacturerName;
+    private final int productionYear;
+    private final int numberOfSeats;
+    private final Color color;
 
     public Car(String modelName, String manufacturerName, int productionYear, int numberOfSeats, Color color) {
         this.modelName = modelName;
@@ -14,46 +16,30 @@ public class Car {
         this.productionYear = productionYear;
         this.numberOfSeats = numberOfSeats;
         this.color = color;
+
+        if (this.productionYear < YEAR_FROM) {
+            throw new IllegalArgumentException("It cannot be produced before " + YEAR_FROM);
+        }
     }
 
     public String getModelName() {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public String getManufacturerName() {
         return manufacturerName;
-    }
-
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
     }
 
     public int getProductionYear() {
         return productionYear;
     }
 
-    public void setProductionYear(int productionYear) {
-        this.productionYear = productionYear;
-    }
-
     public int getNumberOfSeats() {
         return numberOfSeats;
     }
 
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
-    }
-
     public Color getColor() {
         return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     @Override

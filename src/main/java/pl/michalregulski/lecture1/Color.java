@@ -2,7 +2,7 @@ package pl.michalregulski.lecture1;
 
 public enum Color {
 
-    RED(0xff0000), GREEN(0x00ff00), BLUE(0x0000ff);
+    RED(0xff0000), GREEN(0x00ff00), BLUE(0x0000ff), BLACK(0x000000);
 
     private int hexCode;
 
