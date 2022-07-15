@@ -1,8 +1,29 @@
 package pl.michalregulski.lecture2;
 
+import java.util.List;
+
 public class Main {
     public static void main(String... args) {
-        doSomething1();
+
+    }
+
+    private static void boxedTypes() {
+        Byte a = 1;
+        Short b = 1;
+        Integer c = 1;
+        Long d = 1L;
+
+        Float e = 1.0f;
+        Double f = 1.0;
+
+        Boolean g = true;
+
+        Character h = '\0';
+
+        // use cases
+        Integer someValue = null;
+        List<Integer> s = List.of();
+        c.compareTo(a.intValue());
     }
 
     private static void doSomething1(String... args) {
