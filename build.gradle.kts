@@ -17,14 +17,16 @@ tasks.test {
     useJUnitPlatform()
 }
 
+val ENABLE_PREVIEW = "--enable-preview"
+
 tasks.withType<JavaCompile> {
-    options.compilerArgs.add("--enable-preview")
+    options.compilerArgs.add(ENABLE_PREVIEW)
 }
 
 tasks.withType<Test> {
-    jvmArgs("--enable-preview")
+    jvmArgs(ENABLE_PREVIEW)
 }
 
 tasks.withType<JavaExec> {
-    jvmArgs("--enable-preview")
+    jvmArgs(ENABLE_PREVIEW)
 }
